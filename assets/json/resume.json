@@ -1,12 +1,11 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Bala Subramanyam Lanka",
+    "title": "Senior Software Engineer III",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "mail@balasubramanyamlanka.com",
+    "url": "https://balasubramanyamlanka.com/",
+    "summary": "Seasoned Full Stack Java Developer with a decade of experience, excelling in rapid learning and deadline adherence. IBM Certified in WebSphere Operational Decision Management, I specialize in Java, Python, Spring Boot, and Angular, crafting robust web applications. Expertise in Multi-Cloud, Business Rule Management, and database management, complemented by strong analytical and communication skills, makes me a standout team player.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -24,51 +23,180 @@
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Cognizant Technology Solutions, Toronto, Canada",
+      "position": "Manager - Projects (Senior Software Engineer III)",
+      "url": "https://www.cognizant.com/",
+      "startDate": "2022-10-22",
+      "endDate": "onwards",
+      "summary": "Working for client, Discover Financial Services, an American financial services company that owns and operates Discover Bank, an online bank that offers checking and savings accounts, personal loans, home equity loans, student loans and credit cards. Enterprise Decision Platform – Fraud Division reduces the bank fraud using the java microservices, real-time entity profiles, and the business rules (FICO Blaze Rules).",
       "highlights": [
-        "Relativity"
+        "Tech-lead for the offshore team. Working as an individual contributor, lead and guide the development team in building applications using technologies like Java, microservices, Postgres, Spring Boot, JWT, and Kafka.",
+        "Planning and executing the migration of Pivotal Cloud Foundry (PCF) microservice applications to the OpenShift Container Platform (OCP), ensuring a smooth transition with minimal disruption.",
+        "Participating in architectural discussions and providing technical insights to align with the overall organizational goals and strategies.",
+        "Resolving production issues and providing timely support to maintain the stability and reliability of applications in the production environment.",
+        "Assisting in resource planning and project estimation to ensure efficient utilization of team members' skills and time."
+      ]
+    },
+    {
+      "name": "CGI, Toronto, Canada",
+      "position": "Senior Consultant",
+      "url": "https://www.cgi.com/",
+      "startDate": "2021-08-31",
+      "endDate": "2022-10-21",
+      "summary": "Worked for the client RBC Bank, Project - Credit System Services is an ODM driven team at Vendor Platforms, RBC. There are series of rule projects operated for different applications of logic. All the credit related business strategies are automated using the IDM ODM.",
+      "highlights": [
+        "Migrating all the ODM projects from 8.6 to 8.9",
+        "Working with Business rules project, provide any JAVA development support and implement business releases of new rules as packaged by Strategy team.",
+        "Design, code and document implementation of new Rules. Support necessary Java service changes and ensure that data models are propagated properly.",
+        "Work on the POCs on 8.9 and 8.10 ODM projects.",
+        "Provide time barred warranty support for new rules deployed to Production environment, where needed.",
+        "Work in coordination with distributed teams to ensure seamless release of deliverables."
+      ]
+    },
+    {
+      "name": "Netradyne, Bangalore, India",
+      "position": "Senior Software Engineer",
+      "url": "https://www.netradyne.com/",
+      "startDate": "2018-03-01",
+      "endDate": "2019-12-21",
+      "summary": "Worked on a product Driver-i. It provides innovative technologies in AI, ML and Edge Computing to help reduce accidents by creating a new safe driving standard for commercial vehicles. Their solutions reduce driving incidents, protect against false claims, and empower drivers by providing them with more awareness of risky driving behavior and reward safe driver decision-making.",
+      "highlights": [
+        "Developed, test and maintain secure REST APIs using Java, Jersey, Spring Boot, AWS, Postgres.",
+        "Added new features to the web application using the Angular, HTML, CSS. Made the UX simpler by constantly involving in the UX and Product discussions.",
+        "Developed the project to centralize the authentication and authorization of the application by using the OAuth 2.0 frameworks like Spring Security.",
+        "Architected, designed, and developed the “Throttling Algorithm” which plays a key role in the product to minimize the internet bandwidth consumed, which is used to communicate with the servers and the product.",
+        "Architected, designed, and developed Ops-Dashboard, an internal tool for the operations team to support the product. Constantly got inputs from the ops team to build this product, functioned as full stack developer.",
+        "Analyzed, Debugged and Fixed the production bugs. Joined the team as the Software Engineer and promoted as Senior Software Engineer."
+      ]
+    },
+    {
+      "name": "Grisaille AdTech - A Zeta Global Company, Chennai, India",
+      "position": "Software Development Engineer",
+      "url": "https://zetaglobal.com/",
+      "startDate": "2017-09-01",
+      "endDate": "2018-03-01",
+      "summary": "Worked on a product The Zeta Actions platform manages campaigns through Zeta owned and operated portals and distribution channels as well as through a curated network of third-party publisher, which helps clients acquire new customers. This product has algorithms in place to generate a lead based on the several factors.",
+      "highlights": [
+        "Developed secure REST APIs using Java, NodeJS, Spring Boot, AWS, MySQL.",
+        "Architected, designed, and developed automation projects for building efficiency in customer support teams which reduced the time to close the tickets by 14%",
+        "Work in coordination with distributed teams to ensure seamless release of deliverables.",
+        "Analyzed, Debugged and Fixed the production bugs.",
+        "Involved in tuning the existing code with better coding approach.",
+        "Followed the test-driven development, achieving 85% code coverage."
+      ]
+    },
+    {
+      "name": "Cognizant Technology Solutions, Chennai, India",
+      "position": "Programmer Analyst ",
+      "url": "https://www.cognizant.com/",
+      "startDate": "2014-04-22",
+      "endDate": "2017-09-01",
+      "summary": "Worked for client Travelers Insurance, project Small Commercial Business Platform - initiated by Travelers to ensure faster processing of policy transactions by Agents. This application automates the entire policy issue process which enables the Agents to issue policies without delay. SCBP comprises of 43 modules that are involved with different policy stages starting from creation till issue.",
+      "highlights": [
+        "Worked as Java (Web Services)/ODM (Rule Engine, Middleware) developer.",
+        "Designed and developed the code as per the requirements for 43 SOAP Web Services and writing the business rules using J2EE, XSL transformations.",
+        "Business Rules Analysis, Modelling, Authoring, Development using IBM Operational Decision Manager.",
+        "Involved in direct point of contact with the client for gathering requirements, identifying, and analyzing the defect with providing the status.",
+        "Led a team size of 8 and functioned as the team lead. Involved in preparing defect analysis document, production handover document and component integration testing.",
+        "Guided newcomers as a mentor in the team providing the knowledge transfer on the project content and process involved in the team.",
+        "Joined as the Programmer Analyst Trainee and got promoted as Programmer Analyst."
+      ]
+    },
+    {
+      "name": "Full IO, Chennai, India",
+      "position": "Junior Software Engineer",
+      "url": "https://full.io/",
+      "startDate": "2013-07-01",
+      "endDate": "2014-04-01",
+      "summary": "Worked for a product called Conversion Support.It is a real time interaction software that can be integrated easily into any website. This allows you to direct your customers’ questions to the concern people using Dynamic Routing. Conversion Support is totally web based, which allows you to manage your account and access conversation transcripts online anytime, from anywhere in the world.",
+      "highlights": [
+        "Developed secure REST APIs and web application using Java, JBOSS RESTEasy framework, Spring MVC, Google Cloud Platform, Javascript, jQuery, Bootstrap, HTML, CSS.",
+        "Maintained the Cron Jobs and Task queues in the App Engine, Worked on billing module, pdf generation module.",
+        "Migrated the whole REST APIs into the Google App Engine using the Spring MVC.",
+        "Speaker in a knowledge sharing platform, within the company called SYK (Spread Your Knowledge)"
+      ]
+    },
+    {
+      "name": "Full IO, Chennai, India",
+      "position": "Intern Engineer",
+      "url": "https://full.io/",
+      "startDate": "2012-12-01",
+      "endDate": "2013-03-01",
+      "summary": "Worked for a product called Conversion Support.AdaptiveU is an e-learning platform which helps you to create your own set of courses which can be accessed by your own set of precise students, employees, customers. It also helps you to evaluate and track their performance.",
+      "highlights": [
+        "Gained knowledge in Java, Spring, HTML, CSS, Javascript, Google Cloud Platform, jQuery.",
+        "Development using Spring Framework (MVC, Dependency Injection, Caching, Database Connectivity, Restful service , Asynchronous calls) which communicates with various service layers and configuring the Spring files.",
+        "Implemented the commenting module for the video playback, REST calls for new functionalities.",
+        "At the end of the internship, only 3 interns were offered full time positions as Junior Software Engineer out of total 50 interns and I was one of those 3 interns."
       ]
     }
   ],
   "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "",
-      "courses": [
-        "Theory of Relativity"
-      ]
-    }
-  ],
-  "awards": [
+      "institution": "Jawaharlal Nehru Technological University, India",
+      "url": "https://www.jntuk.edu.in/",
+      "area": "Computer Science Engineering",
+      "studyType": "Bachelor in Technology",
+      "startDate": "2009-06-01",
+      "endDate": "2013-04-01",
+      "score": "72 out of 100 (First Class in Distinction)",
+      "courses": []
+    },
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "institution": "College Lasalle, Canada",
+      "url": "https://www.collegelasalle.com/",
+      "area": "Information Technology Programmer-Analyst",
+      "studyType": "Attestation of College Studies",
+      "startDate": "2020-01-01",
+      "endDate": "2021-05-01",
+      "score": "31.22 out of 50 (R SCORE)",
+      "courses": []
     }
   ],
+  "awards": [],
   "certificates": [],
   "publications": [],
-  "skills": [],
-  "languages": [
+  "skills": [
     {
-      "language": "German",
-      "fluency": "Native speaker"
+      "name": "Languages",
+      "icon": "fa fa-code",
+      "keywords": "Java, Python, C#, C++, C"
     },
+    {
+      "name": "Frontend",
+      "icon": "fa fa-quote-right",
+      "keywords": "Javascript, HTML, CSS, Angular, Bootstrap, jQuery"
+    },
+    {
+      "name": "Database",
+      "icon": "fa fa-database",
+      "keywords": "Postgres, Oracle"
+    },
+    {
+      "name": "Cloud / Containerization",
+      "icon": "fa fa-cloud",
+      "keywords": "AWS, OCP, GCP, PCF, Docker, Kubernetes"
+    },
+    {
+      "name": "Frameworks",
+      "icon": "fa fa-tasks",
+      "keywords": "IBM ODM, Ilog Jrules, Spring Boot, Spring Security, Django, Apache iBATIS, Eclipse Jersey"
+    },
+    {
+      "name": "Miscellaneous",
+      "icon": "fa fa-cubes",
+      "keywords": "Postman, SOAP UI, MS-Office, IntelliJ, Eclipse, Operating System (Linux/MacOS/Windows)"
+    }
+  ],
+  "languages": [
     {
       "language": "English",
       "fluency": "Fluent"
+    },
+    {
+      "language": "Telugu",
+      "fluency": "Native Speaker"
     }
   ],
   "interests": [],

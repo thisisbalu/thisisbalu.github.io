@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Bala Subramanyam Lanka
     - name: Date of Birth
-      value: 14th March 1879
+      value: 25th March 1992
     - name: Languages
-      value: English, German
+      value: English, Telugu
 
 - title: Education
   type: time_table
