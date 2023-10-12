@@ -30,7 +30,7 @@ jobs:
         sudo apt-get -y install libgsl-dev 
         sudo apt update && sudo apt install ruby-dev
         gem install classifier-reborn
-        sudo gem install --conservative --no-ri --no-rdoc gsl
+        sudo gem install --conservative -N gsl
     - name: Install and Build 🔧
       run: |
         pip3 install --upgrade jupyter
