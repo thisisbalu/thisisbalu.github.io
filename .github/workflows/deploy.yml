@@ -26,13 +26,11 @@ jobs:
       with:
         ruby-version: '3.2.2'
         bundler-cache: true
-    - run: |
-        sudo apt-get -y install libgsl-dev 
-        sudo apt update && sudo apt install ruby-dev
-        gem install classifier-reborn
-        sudo gem install --conservative -N gsl
     - name: Install and Build 🔧
       run: |
+        sudo apt-get -y install libgsl-dev 
+        gem install classifier-reborn
+        sudo gem install gsl
         pip3 install --upgrade jupyter
         npm install -g mermaid.cli
         npm install -g purgecss
