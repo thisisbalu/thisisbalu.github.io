@@ -17,8 +17,8 @@ keywords: balasubramanyamlanka, lbs, technology, resume, balu, balu-website, bal
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: main/favicon.png  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://thisisbalu.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/
+url: https://balasubramanyamlanka.com # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
