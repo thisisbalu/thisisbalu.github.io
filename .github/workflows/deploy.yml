@@ -28,11 +28,16 @@ jobs:
         bundler-cache: true
     - name: Install and Build 🔧
       run: |
+        # sudo apt-get install ruby-dev zlib1g-dev liblzma-dev
+        # sudo gem install rails
+        # sudo apt-get -y install libgsl-dev 
+        # gem install classifier-reborn
+        # sudo gem install gsl
         pip3 install --upgrade jupyter
         npm install -g mermaid.cli
         npm install -g purgecss
         export JEKYLL_ENV=production
-        bundle exec jekyll build --lsi
+        bundle exec jekyll build
         purgecss -c purgecss.config.js
     - name: Deploy 🚀
       if: github.event_name != 'pull_request'
