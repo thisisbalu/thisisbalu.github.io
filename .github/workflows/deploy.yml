@@ -28,7 +28,8 @@ jobs:
         bundler-cache: true
     - name: Install and Build 🔧
       run: |
-        sudo apt-get -y install libgsl-dev  
+        sudo apt-get -y install libgsl-dev 
+        sudo apt-get update && apt-get install -y build-essential
         gem install classifier-reborn
         gem install gsl
         pip3 install --upgrade jupyter
