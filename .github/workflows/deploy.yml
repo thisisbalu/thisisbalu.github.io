@@ -28,6 +28,8 @@ jobs:
         bundler-cache: true
     - name: Install and Build 🔧
       run: |
+        sudo apt-get install ruby-dev zlib1g-dev liblzma-dev
+        sudo gem install rails
         sudo apt-get -y install libgsl-dev 
         gem install classifier-reborn
         sudo gem install gsl
