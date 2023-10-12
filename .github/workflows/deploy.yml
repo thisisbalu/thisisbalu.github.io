@@ -32,7 +32,7 @@ jobs:
         # sudo gem install rails
         # sudo apt-get -y install libgsl-dev 
         # gem install classifier-reborn
-        sudo gem install gsl
+        # sudo gem install gsl
         pip3 install --upgrade jupyter
         npm install -g mermaid.cli
         npm install -g purgecss
