@@ -3,7 +3,6 @@ title: How to assign specific value to each element in Array
 author: Bala Subramanyam Lanka
 layout: post
 date: 2014-10-03T14:30:09+00:00
-url: /how-to-assign-specific-value-to-each-element-in-array/
 categories:
   - Java
 tags:
