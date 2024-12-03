@@ -12,7 +12,6 @@ toc:
   sidebar: right
 description: "Dive into the world of ConfigMaps in OpenShift and Kubernetes with this laid-back guide that weighs the pros and cons and explores various setups with easy-to-digest code snippets."
 ---
----
 
 Alright, fellow code wranglers! Today, I’m diving into one of those magical things that makes configuring your applications in Kubernetes and OpenShift so much easier—ConfigMaps. Sounds fancy, right? But what are they, and why should you give a damn? Let’s break it down, with a sprinkle of humor and some code to keep things spicy.
 
