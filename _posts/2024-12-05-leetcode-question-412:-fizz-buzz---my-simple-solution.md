@@ -12,9 +12,6 @@ toc:
   sidebar: right
 description: "In this post, I’m sharing my resolution to Leetcode’s Fizz Buzz problem. It’s simple yet useful, so let's dive in together!"
 ---
----
-
-So, I’ve been diving deep into the Leetcode world lately, solving problems daily like a caffeine-fueled coding machine. Today, I’m going to share my approach to a classic: Leetcode Question 412 - Fizz Buzz. It’s a rite of passage for many programmers, and today you get to see how I tackled it— spoiler alert: it’s not rocket science!
 
 ### The Fizz Buzz Problem
 
@@ -49,22 +46,6 @@ class Solution {
 }
 ```
 
-### How It Works
-
-1. **Initialization**: We kick things off by creating a `List<String>` called `answer` to hold our results.
-  
-2. **Looping through numbers**: With a simple for-loop, we run from 1 through `n`. For each number:
-
-   - We start with an empty string called `ans`.
-  
-   - If the number is a multiple of 3, we append “Fizz” to `ans`.
-  
-   - If it’s a multiple of 5, we append “Buzz” to `ans`.
-  
-   - If `ans` is still empty (meaning the number isn’t a multiple of 3 or 5), we convert the integer to a string and assign that to `ans`.
-
-3. **Collecting Results**: Finally, we add whatever is in `ans` to our `answer` list.
-
 ### Complexity Analysis
 
 Now, let’s chat about performance because, let’s face it, nobody likes shit code that runs like a snail. 
@@ -72,10 +53,6 @@ Now, let’s chat about performance because, let’s face it, nobody likes shit 
 - **Time Complexity**: This bad boy runs in O(n) time because we’re looping through numbers from 1 to `n`. Each iteration checks conditions and does basic string operations, so there are no hidden surprises here.
 
 - **Space Complexity**: The space complexity is O(n) as well because we’re storing up to `n` strings in our list. That’s pretty standard for problems that require returning collections.
-
-### Final Thoughts
-
-There ya go! That’s my take on the Fizz Buzz problem. It's such a neat little exercise to get the coding juices flowing. Share your own approaches in the comments; I’m curious and always looking to up my coding game! 
 
 References:
 - [Leetcode Problem 412: Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
