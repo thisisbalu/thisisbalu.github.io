@@ -12,9 +12,6 @@ toc:
   sidebar: right
 description: "In this post, I’ll walk you through my solution for LeetCode problem 1342—how to reduce a number to zero step by step. Let’s dive into the code and break it down!"
 ---
----
-
-Hey folks! So, I've been tackling some LeetCode problems lately, trying to keep my coding skills sharp (and avoid falling into the abyss of procrastination). Today, I’m gonna share my solution to LeetCode question 1342: "Number of Steps to Reduce a Number to Zero." Spoiler alert: it’s not rocket science, but it sure is fun!
 
 Let’s kick things off with the problem statement. The challenge is to find out how many steps it takes to reduce a number to zero, where the steps are defined as follows: 
 - If the number is even, divide it by 2. 
@@ -43,14 +40,6 @@ class Solution {
 }
 ```
 
-Now, let’s walk through this step-by-step. It’s pretty simple, and I’ll break it down for you lazy programmers out there.
-
-1. **Initialization**: We start by declaring an integer `i` to keep track of steps.
-2. **Looping**: As long as `num` is greater than 0, we run the loop. Pretty standard!
-3. **Counting Steps**: For every iteration, we bump our step count `i` by one.
-4. **Checking Even or Odd**: We use the modulus operator `%`. If `num` is even (i.e., `num % 2 == 0`), we divide it by 2. If it’s odd, we simply subtract 1. Easy peasy.
-5. **Return Steps**: Once `num` becomes 0, we return our step count.
-
 ### A Quick Example
 
 Let’s see this in action with an example. 
@@ -72,15 +61,7 @@ In terms of performance:
 - **Time Complexity**: O(log n) — This is because every time you divide by 2, you effectively halve the number of operations needed.
 - **Space Complexity**: O(1) — We're only using a fixed amount of space (the variable `i`).
 
-### Final Thoughts
-
-And there you have it! A simple solution to LeetCode question 1342 that even a cat could code (if they could type—guess they'll need a paw-friendly keyboard!). I hope this little explanation was helpful for you, and if you have suggestions or your own solutions, drop them in the comments. 
-
-Remember, the key to improving your coding skills is consistent practice, and sharing your progress not only keeps you accountable but could also help someone else out there. So, keep coding, keep solving, and let’s crush those problems together!
-
 ### References
 - [LeetCode Problem 1342](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/)
-- [Java Documentation](https://docs.oracle.com/javase/8/docs/api/)
-- [Programming Community on Reddit](https://www.reddit.com/r/programming/)
-  
+- [Java Documentation](https://docs.oracle.com/javase/8/docs/api/)  
 Happy coding!
