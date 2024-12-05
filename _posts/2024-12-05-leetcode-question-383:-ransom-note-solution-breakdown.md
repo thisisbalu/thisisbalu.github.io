@@ -14,8 +14,6 @@ description: "In this post, I'll walk you through my daily grind of solving Leet
 ---
 ---
 
-Hey folks! So, here I am again, knee-deep in my LeetCode addiction, trying to tackle those pesky coding challenges. Today, let’s chat about LeetCode problem 383, Ransom Note. If you haven’t come across this beauty yet, let me break it down for you.
-
 ### Problem Statement
 
 The problem states:
@@ -60,12 +58,6 @@ class Solution {
 }
 ```
 
-### How It Works
-
-1. **Counting letters:** The first loop goes through the `magazine` string and counts how many times each letter appears using a `HashMap`. This is super handy because it gives us a way to keep track of our available letters.
-
-2. **Checking the ransom note:** The second loop iterates through the `ransomNote`, checking if we have enough of each character. If any character in the `ransomNote` isn't available (or has been exhausted), we simply return `false`. If we get through the whole `ransomNote` without issue, we return `true`.
-
 ### Complexity Analysis
 
 - **Time Complexity:** O(m + n), where m is the length of the `magazine` and n is the length of the `ransomNote`. We traverse both strings linearly, so this is pretty efficient.
@@ -83,5 +75,3 @@ Feel free to hit me up with your own solutions or questions in the comments. Let
 ### References
 
 - [LeetCode Problem 383](https://leetcode.com/problems/ransom-note/)
-- [Java HashMap Documentation](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
-- [Complexity Analysis](https://en.wikipedia.org/wiki/Big_O_notation)
