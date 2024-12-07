@@ -69,5 +69,3 @@ So there you have it, folks! A quick cheatsheet to help you out when lines get o
 ### References
 - [GNU `tr`](https://www.gnu.org/software/coreutils/manual/html_node/tr.html)
 - [GNU `sed`](https://www.gnu.org/software/sed/manual/sed.html) 
-
-Feel free to drop your thoughts or any additional hacks in the comments below. Happy coding, and may your files always be line-free!
