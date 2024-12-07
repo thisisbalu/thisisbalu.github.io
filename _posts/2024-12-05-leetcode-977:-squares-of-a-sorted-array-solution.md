@@ -14,7 +14,7 @@ description: "In this post, I'm sharing my solution for LeetCode problem 977 - S
 ---
 ---
 
-Alright folks, let’s tackle LeetCode 977: Squares of a Sorted Array. Yeah, if you’ve spent any time on LeetCode, you know where we’re headed with this one. It’s all about taking a sorted array of integers, squaring them, and returning them in the same sorted order. Sounds simple, right? Well, there’s always a twist with these problems.
+Let’s tackle LeetCode 977: Squares of a Sorted Array. Yeah, if you’ve spent any time on LeetCode, you know where we’re headed with this one. It’s all about taking a sorted array of integers, squaring them, and returning them in the same sorted order. Sounds simple, right? Well, there’s always a twist with these problems.
 
 ## Problem Statement
 
@@ -51,19 +51,6 @@ class Solution {
     }
 }
 ```
-
-### Breakdown of the Solution
-
-1. **Initialization**: We create an integer array `result` of the same length as `nums` to hold the squared values.
-2. **Two Pointers Technique**: We set up two pointers: `left` (starting at the beginning of `nums`) and `right` (starting at the end of `nums`).
-3. **Squaring Logic**: 
-   - We iterate backward through the `result` array.
-   - At each step, we compare the absolute values at the `left` and `right` pointers.
-   - Depending on which absolute value is larger, we square it and place it in the correct position in the `result` array. 
-   - We then move the corresponding pointer inward.
-4. **Return Result**: Finally, we return the `result` array.
-
-This approach ensures we only loop through `nums` once, so it’s efficient as hell.
 
 ## Complexity Analysis
 
