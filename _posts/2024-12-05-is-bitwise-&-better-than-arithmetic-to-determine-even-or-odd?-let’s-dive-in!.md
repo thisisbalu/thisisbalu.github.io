@@ -83,4 +83,3 @@ Now go out there and make those decisions that count—both in coding and in lif
 ### References
 - [Bitwise Operators - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
 - [Understanding Bitwise Operators - GeeksforGeeks](https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/)
-- [The Cost of Arithmetic vs. Bitwise Operations - Stack Overflow](https://stackoverflow.com/questions/11316046/cost-of-arithmetic-vs-bitwise-operations)
