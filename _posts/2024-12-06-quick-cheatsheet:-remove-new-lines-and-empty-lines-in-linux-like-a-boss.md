@@ -1,5 +1,5 @@
 ---
-title: "Quick Cheatsheet: Remove New Lines and Empty Lines in Linux Like a Boss"
+title: "Quick Cheatsheet: Remove New Lines and Empty Lines in Linux"
 date: 2024-12-06T12:30:27+00:00
 layout: post
 categories:
@@ -14,7 +14,7 @@ description: "This article breaks down some quick commands to tidy up files in L
 ---
 ---
 
-Hey there, fellow code wranglers! You know how sometimes you’re knee-deep in some file, and it’s just cluttered with new lines or annoying empty lines? Yeah, that’s the kind of crap that can drive you mad. Don’t you wish there was an easy way to wipe that all away? Well, I've got your back. Get ready to transform your files into neat little packages with just a few commands. Let’s dive in!
+You know how sometimes you’re knee-deep in some file, and it’s just cluttered with new lines or annoying empty lines? Yeah, that’s the kind of crap that can drive you mad. Don’t you wish there was an easy way to wipe that all away? Well, I've got your back. Get ready to transform your files into neat little packages with just a few commands.
 
 ### Removing New Lines
 
