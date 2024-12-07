@@ -1,5 +1,5 @@
 ---
-title: "LeetCode 485 - Finding Max Consecutive Ones: My Daily Struggle"
+title: "LeetCode 485 - Finding Max Consecutive Ones"
 date: 2024-12-05T23:38:45+00:00
 layout: post
 categories:
@@ -13,8 +13,6 @@ toc:
 description: "In this post, I dive into my LeetCode journey and present my solution to the question 485, "Max Consecutive Ones," along with a complexity analysis and some references for further exploration."
 ---
 ---
-
-Hey folks! Today, I'm back with another installment of my daily LeetCode grind. If you’re anything like me, you probably run into those annoying problems where your brain tries to conk out but then, you’ve just got to solve the damn thing. Today’s question is LeetCode 485 - "Max Consecutive Ones." Let’s jump right into it!
 
 ### The Problem
 
@@ -51,16 +49,6 @@ class Solution {
 }
 ```
 
-#### How It Works
-
-So, how does this bad boy do its thing? Here’s the deal:
-
-- We run a loop through the entire array.
-- Whenever we hit a 0, we reset the current count (since we can’t have ones after zero).
-- When we encounter a 1, we just keep incrementing our current count.
-- We keep updating our final count (`fc`) with the max of current count and final count.
-- At the end of the loop, we simply return `fc`.
-
 ### Complexity Analysis
 
 Let's break down the complexity a bit because that’s always a fun part, right?
@@ -76,6 +64,3 @@ If you want to dive deeper or see examples of more coding problems, check out th
 
 - [LeetCode Problem 485](https://leetcode.com/problems/max-consecutive-ones/)
 - [Good Article on Sliding Window Techniques](https://www.geeksforgeeks.org/window-sliding-technique/)
-- [Data Structures and Algorithms in Java (Book)](https://www.amazon.com/Data-Structures-Algorithms-Java-Masoom/dp/1484240382)
-
-Happy coding, and may your days be filled with consecutive ones (or fives, if you're feeling lucky)! Catch you on the flip side!
