@@ -14,7 +14,7 @@ description: "In this post, I’m sharing my solution to LeetCode question 1295.
 ---
 ---
 
-Hey there, fellow code wranglers! So, I’ve been diving into LeetCode problems day in and day out, and today I'm going to share a neat little solution for LeetCode question 1295: *Find Numbers with Even Number of Digits*. You know how it goes - some days you just churn out code while other days you stare at the screen like a total idiot. But hey, let’s crack on with it!
+So, I’ve been diving into LeetCode problems day in and day out, and today I'm going to share a neat little solution for LeetCode question 1295: *Find Numbers with Even Number of Digits*. You know how it goes - some days you just churn out code while other days you stare at the screen like a total idiot. But hey, let’s crack on with it!
 
 ### The Problem
 
@@ -50,16 +50,6 @@ class Solution {
 }
 ```
 
-### How It Works
-
-Let me break this down for you:
-
-- We start with a `counter` initialized to zero. This will store the count of numbers that have even digits.
-- We loop through each number in the array. 
-- For each number, we determine the number of digits by dividing the number by 10 until it hits zero. This way, we’re effectively counting how many times we can divide it—thus, counting the digits.
-- If the digit count is even (checked using `(digits & 1) == 0`), we increase our `counter`.
-- Finally, we return the `counter` which tells us how many numbers had an even number of digits.
-
 ### Complexity Analysis
 
 Now let’s talk complexity, because, you know, that’s the good stuff.
@@ -72,5 +62,3 @@ Now let’s talk complexity, because, you know, that’s the good stuff.
 
 - [LeetCode Problem 1295](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
 - [Bit Manipulation](https://en.wikipedia.org/wiki/Bit_manipulation)
-
-In conclusion, this problem is a fun little exercise on counting and a reminder that, sometimes, the simplest problems are the most satisfying to solve. So, give it a shot, and who knows, you might just surprise yourself with how quickly you can crank out solutions! Until next time, keep hacking away!
