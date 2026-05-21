@@ -152,7 +152,47 @@ def power(base, exp):
     return base * power(base, exp - 1)
 
 result = power(2, 10)
-print(result)`}],TT=Za[0].code,Wn=bT((t,e)=>({pyodideStatus:"loading",pyodideProgress:0,pyodideStage:"Initializing...",code:TT,selectedExample:Za[0].id,frames:[],executionStatus:"idle",executionError:null,currentFrameIndex:0,isPlaying:!1,playbackSpeed:1,viewMode:"simple",selectedCallNodeId:null,theme:"light",setPyodideStatus:n=>t({pyodideStatus:n}),setPyodideProgress:(n,i)=>t({pyodideProgress:n,pyodideStage:i}),setCode:n=>t({code:n,frames:[],executionStatus:"idle",currentFrameIndex:0}),selectExample:n=>{const i=Za.find(r=>r.id===n);i&&t({code:i.code,selectedExample:n,frames:[],executionStatus:"idle",currentFrameIndex:0})},setFrames:(n,i)=>t({frames:n,executionStatus:i,currentFrameIndex:0,isPlaying:!1,selectedCallNodeId:null}),setExecutionStatus:(n,i=null)=>t({executionStatus:n,executionError:i}),setCurrentFrameIndex:n=>{const{frames:i}=e(),r=Math.max(0,Math.min(n,i.length-1));t({currentFrameIndex:r,selectedCallNodeId:null})},setSelectedCallNodeId:n=>t({selectedCallNodeId:n}),stepForward:()=>{const{currentFrameIndex:n,frames:i}=e();n<i.length-1?t({currentFrameIndex:n+1,selectedCallNodeId:null}):t({isPlaying:!1})},stepBackward:()=>{const{currentFrameIndex:n}=e();n>0&&t({currentFrameIndex:n-1,selectedCallNodeId:null})},rewind:()=>t({currentFrameIndex:0,isPlaying:!1,selectedCallNodeId:null}),setIsPlaying:n=>t({isPlaying:n}),setPlaybackSpeed:n=>t({playbackSpeed:n}),toggleViewMode:()=>t(n=>({viewMode:n.viewMode==="simple"?"technical":"simple"})),toggleTheme:()=>t(n=>({theme:n.theme==="dark"?"light":"dark"}))})),CT=`import sys
+print(result)`},{id:"tree_traversal",label:"Tree Traversal",code:`# Each node spawns two children — left subtree fully explored
+# before the right even starts. Watch the call tree mirror
+# the structure of the data tree exactly.
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def inorder(node):
+    if node is None:
+        return
+    inorder(node.left)
+    print(node.val)
+    inorder(node.right)
+
+tree = Node(4,
+    Node(2, Node(1), Node(3)),
+    Node(6, Node(5), Node(7))
+)
+inorder(tree)`},{id:"backtracking",label:"Backtracking",code:`# Finds all paths from top-left to bottom-right of a grid.
+# Watch branches get explored then abandoned — the call tree
+# grows deep, hits a dead end, and unwinds back to try another path.
+def find_paths(grid, r, c, path):
+    rows, cols = len(grid), len(grid[0])
+    if r >= rows or c >= cols or grid[r][c] == 1:
+        return
+    path.append((r, c))
+    if r == rows - 1 and c == cols - 1:
+        print(path[:])
+    else:
+        find_paths(grid, r + 1, c, path)
+        find_paths(grid, r, c + 1, path)
+    path.pop()
+
+grid = [
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0],
+]
+find_paths(grid, 0, 0, [])`}],TT=Za[0].code,Wn=bT((t,e)=>({pyodideStatus:"loading",pyodideProgress:0,pyodideStage:"Initializing...",code:TT,selectedExample:Za[0].id,frames:[],executionStatus:"idle",executionError:null,currentFrameIndex:0,isPlaying:!1,playbackSpeed:1,viewMode:"simple",selectedCallNodeId:null,theme:"light",setPyodideStatus:n=>t({pyodideStatus:n}),setPyodideProgress:(n,i)=>t({pyodideProgress:n,pyodideStage:i}),setCode:n=>t({code:n,frames:[],executionStatus:"idle",currentFrameIndex:0}),selectExample:n=>{const i=Za.find(r=>r.id===n);i&&t({code:i.code,selectedExample:n,frames:[],executionStatus:"idle",currentFrameIndex:0})},setFrames:(n,i)=>t({frames:n,executionStatus:i,currentFrameIndex:0,isPlaying:!1,selectedCallNodeId:null}),setExecutionStatus:(n,i=null)=>t({executionStatus:n,executionError:i}),setCurrentFrameIndex:n=>{const{frames:i}=e(),r=Math.max(0,Math.min(n,i.length-1));t({currentFrameIndex:r,selectedCallNodeId:null})},setSelectedCallNodeId:n=>t({selectedCallNodeId:n}),stepForward:()=>{const{currentFrameIndex:n,frames:i}=e();n<i.length-1?t({currentFrameIndex:n+1,selectedCallNodeId:null}):t({isPlaying:!1})},stepBackward:()=>{const{currentFrameIndex:n}=e();n>0&&t({currentFrameIndex:n-1,selectedCallNodeId:null})},rewind:()=>t({currentFrameIndex:0,isPlaying:!1,selectedCallNodeId:null}),setIsPlaying:n=>t({isPlaying:n}),setPlaybackSpeed:n=>t({playbackSpeed:n}),toggleViewMode:()=>t(n=>({viewMode:n.viewMode==="simple"?"technical":"simple"})),toggleTheme:()=>t(n=>({theme:n.theme==="dark"?"light":"dark"}))})),CT=`import sys
 import json
 import io
 
