@@ -1,1 +1,0 @@
-import{n as e}from"./critters.C5NLdyV3.js";var t=document.querySelector(`[data-critters]`),n=t?.querySelector(`[data-home]`);n?.addEventListener(`click`,e=>{new URL(n.href).pathname===location.pathname&&(e.preventDefault(),n.classList.remove(`wiggle`),n.offsetWidth,n.classList.add(`wiggle`))}),t&&e(t);
