@@ -1,25 +1,4 @@
-var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=class{kind;el;x=0;y=0;facing=1;tilt=0;perch=null;w=0;h=0;gen=0;aspect;constructor(e,t,n){this.kind=t;let[r,i,a,o]=n.viewBox;this.aspect=o/a,this.el=document.createElement(`div`),this.el.className=`critter critter-${t}`,this.el.innerHTML=`<svg viewBox="${r} ${i} ${a} ${o}" aria-hidden="true">${n.markup}</svg>`,e.append(this.el)}size(e){return this.w=e,this.h=e*this.aspect,this.el.style.width=`${this.w}px`,this.el.style.height=`${this.h}px`,this.render(),this}state(e){return this.el.dataset.state=e,this}get current(){return this.el.dataset.state??``}face(e){this.facing=e<0?-1:1,this.render()}place(e){this.x=e.x,this.y=e.y,this.render()}stop(){this.gen++}render(){this.el.style.transform=`translate(${this.x-this.w/2}px, ${this.y-this.h}px)`,this.el.style.setProperty(`--facing`,String(this.facing)),this.el.style.setProperty(`--tilt`,`${this.tilt.toFixed(1)}deg`)}level(){this.tilt=0,this.render()}move(t,{duration:n,lift:r=0,easing:i=`inOut`,wobble:a=0,keepFacing:o=!1}){let s=++this.gen,c={x:this.x,y:this.y};!o&&Math.abs(t.x-c.x)>1&&this.face(t.x-c.x);let l={x:(c.x+t.x)/2,y:Math.min(c.y,t.y)-r},u=performance.now();return new Promise(r=>{let o=d=>{if(s!==this.gen)return r(!1);let f=Math.min(1,(d-u)/n),p=e[i](f),m=1-p;this.x=m*m*c.x+2*m*p*l.x+p*p*t.x,this.y=m*m*c.y+2*m*p*l.y+p*p*t.y+Math.sin(f*Math.PI*6)*a*Math.sin(f*Math.PI),this.render(),f<1?requestAnimationFrame(o):r(!0)};requestAnimationFrame(o)})}wait(e){let t=this.gen;return new Promise(n=>setTimeout(()=>n(t===this.gen),e))}remove(){this.stop(),this.el.remove()}},n=(e,t)=>e+Math.random()*(t-e),r=e=>e[Math.floor(Math.random()*e.length)],i=(e,t)=>Math.hypot(e.x-t.x,e.y-t.y),a={viewBox:[-26,-36,52,37],markup:`
-  <g class="bird-body">
-    <g class="tail">
-      <path d="M-7 -10 C-14 -12 -20 -16 -25 -15 C-22 -12 -21 -9 -22 -6 C-17 -6 -12 -6 -7 -6 Z" />
-      <path class="tail-light" d="M-8 -9 C-13 -10 -18 -12 -21 -11 C-19 -9.5 -18.5 -8 -19 -7 C-15 -7 -11 -7 -8 -7.5 Z" />
-    </g>
-    <g class="legs">
-      <rect x="-2.6" y="-4.5" width="1.4" height="4.5" rx="0.7" />
-      <rect x="2" y="-4.5" width="1.4" height="4.5" rx="0.7" />
-    </g>
-    <ellipse class="body" cx="1" cy="-13" rx="13.5" ry="10.5" transform="rotate(-12 1 -13)" />
-    <ellipse class="belly" cx="4.5" cy="-9.5" rx="8.5" ry="6.2" transform="rotate(-18 4.5 -9.5)" />
-    <g class="head">
-      <path class="tuft" d="M8.5 -27.5 C8 -31.5 11 -33 13 -31.5 C11 -31 10.5 -29.5 11.5 -28 Z" />
-      <circle class="crown" cx="11.5" cy="-21.5" r="7.6" />
-      <circle class="cheek" cx="13.6" cy="-17.6" r="2.1" />
-      <g class="eye"><circle cx="14" cy="-22.6" r="1.75" /><circle class="glint" cx="14.6" cy="-23.2" r="0.6" /></g>
-      <path class="beak" d="M18.6 -22.6 C20.5 -22.4 23 -21.4 24.2 -20.4 C22.8 -19.6 20.6 -19.2 18.8 -19.2 Z" />
-    </g>
-    <path class="wing wing-fold" d="M-9 -14 C-4 -21 6 -21 10 -13 C5 -9.5 -3 -9 -9 -14 Z" />
-    <path class="wing wing-up" d="M-6 -16 C-6 -28 4 -36 14 -33 C11 -27 9 -20 4 -15 C1 -14 -3 -14.5 -6 -16 Z" />
-  </g>`},o={viewBox:[-21,-36,45,37],markup:`
+var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=class{kind;el;x=0;y=0;facing=1;tilt=0;perch=null;w=0;h=0;gen=0;aspect;constructor(e,t,n){this.kind=t;let[r,i,a,o]=n.viewBox;this.aspect=o/a,this.el=document.createElement(`div`),this.el.className=`critter critter-${t}`,this.el.innerHTML=`<svg viewBox="${r} ${i} ${a} ${o}" aria-hidden="true">${n.markup}</svg>`,e.append(this.el)}size(e){return this.w=e,this.h=e*this.aspect,this.el.style.width=`${this.w}px`,this.el.style.height=`${this.h}px`,this.render(),this}state(e){return this.el.dataset.state=e,this}get current(){return this.el.dataset.state??``}face(e){this.facing=e<0?-1:1,this.render()}place(e){this.x=e.x,this.y=e.y,this.render()}stop(){this.gen++}render(){this.el.style.transform=`translate(${this.x-this.w/2}px, ${this.y-this.h}px)`,this.el.style.setProperty(`--facing`,String(this.facing)),this.el.style.setProperty(`--tilt`,`${this.tilt.toFixed(1)}deg`)}level(){this.tilt=0,this.render()}move(t,{duration:n,lift:r=0,easing:i=`inOut`,wobble:a=0,keepFacing:o=!1}){let s=++this.gen,c={x:this.x,y:this.y};!o&&Math.abs(t.x-c.x)>1&&this.face(t.x-c.x);let l={x:(c.x+t.x)/2,y:Math.min(c.y,t.y)-r},u=performance.now();return new Promise(r=>{let o=d=>{if(s!==this.gen)return r(!1);let f=Math.min(1,(d-u)/n),p=e[i](f),m=1-p;this.x=m*m*c.x+2*m*p*l.x+p*p*t.x,this.y=m*m*c.y+2*m*p*l.y+p*p*t.y+Math.sin(f*Math.PI*6)*a*Math.sin(f*Math.PI),this.render(),f<1?requestAnimationFrame(o):r(!0)};requestAnimationFrame(o)})}wait(e){let t=this.gen;return new Promise(n=>setTimeout(()=>n(t===this.gen),e))}remove(){this.stop(),this.el.remove()}},n=(e,t)=>e+Math.random()*(t-e),r=e=>e[Math.floor(Math.random()*e.length)],i=(e,t)=>Math.hypot(e.x-t.x,e.y-t.y),a={viewBox:[-21,-36,45,37],markup:`
   <g class="dog-body">
     <g class="pose pose-stand">
       <path class="g-leg far u hind" data-p="rh-u" /><path class="g-leg far l" data-p="rh-l" />
@@ -90,7 +69,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
         <path class="ear" d="M8.4 -29.2 C4.6 -29.6 3.8 -22 6.2 -17.4 C8.8 -17.8 10.4 -22.8 10.8 -27.8 Z" />
       </g></g>
     </g>
-  </g>`},s=`
+  </g>`},o=`
         <g class="head">
           <circle class="coat" cx="11.2" cy="-25.6" r="5.4" />
           <circle class="coat-light" cx="9.6" cy="-31" r="4.2" />
@@ -103,7 +82,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
           <ellipse class="tongue" cx="19" cy="-20.6" rx="1" ry="1.4" />
           <g class="eye"><circle cx="13.4" cy="-26.6" r="1.15" /><circle class="glint" cx="13.8" cy="-27" r="0.4" /></g>
           <g class="ear"><circle cx="7.6" cy="-25.6" r="2.4" /><circle cx="7" cy="-22" r="2.6" /><circle cx="7.6" cy="-18.4" r="2.2" /></g>
-        </g>`,c={viewBox:[-21,-36,45,37],markup:`
+        </g>`,s={viewBox:[-21,-36,45,37],markup:`
   <g class="dog-body">
     <g class="pose pose-stand">
       <path class="g-leg far u hind" data-p="rh-u" /><path class="g-leg far l" data-p="rh-l" />
@@ -120,7 +99,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
       <g data-p="neck">
         <path class="collar" d="M6.4 -20.4 L10.4 -22.8" />
         <circle class="tag" cx="8.2" cy="-19.8" r="1.1" />
-        <g transform="translate(-0.4 -0.6)">${s}</g>
+        <g transform="translate(-0.4 -0.6)">${o}</g>
       </g>
     </g>
     <g class="pose pose-sit">
@@ -135,7 +114,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
       <g class="leg near"><rect x="3.4" y="-17" width="3" height="17" rx="1.5" /><circle class="coat-light" cx="4.9" cy="-1.4" r="2.1" /></g>
       <path class="collar" d="M3.6 -22.6 L9.4 -24.8" />
       <circle class="tag" cx="6.2" cy="-22.6" r="1.2" />
-      <g transform="translate(-3 -4.6)">${s}</g>
+      <g transform="translate(-3 -4.6)">${o}</g>
     </g>
     <g class="pose pose-lie">
       <g class="tail-wag"><path class="tail-line" d="M-13.6 -6 C-15.6 -8.6 -16.2 -11 -16 -13" /><circle class="coat" cx="-16" cy="-14.6" r="2.8" /></g>
@@ -144,9 +123,9 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
       <rect class="coat-dark" x="8" y="-3" width="10" height="3" rx="1.5" />
       <circle class="coat-light" cx="17.4" cy="-1.5" r="1.9" />
       <path class="collar" d="M7 -9.4 L9.6 -3.6" />
-      <g transform="translate(-1 11.6)">${s}</g>
+      <g transform="translate(-1 11.6)">${o}</g>
     </g>
-  </g>`},l=`
+  </g>`},c=`
         <g class="head">
           <path class="ear ear-far" d="M7.8 -27.4 L8.2 -34.4 L12.4 -28.8 Z" />
           <circle class="coat" cx="10.6" cy="-23.2" r="6.1" />
@@ -158,7 +137,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
           <ellipse class="yawn" cx="17.6" cy="-20.4" rx="1.3" ry="1" />
           <ellipse class="tongue" cx="18" cy="-19.6" rx="0.8" ry="1.2" />
           <g class="eye"><circle cx="12.9" cy="-24.6" r="1.35" /><circle class="glint" cx="13.35" cy="-25.05" r="0.45" /></g>
-        </g>`,u={viewBox:[-21,-36,45,37],markup:`
+        </g>`,l={viewBox:[-21,-36,45,37],markup:`
   <g class="dog-body">
     <g class="pose pose-stand">
       <path class="g-leg far u hind" data-p="rh-u" /><path class="g-leg far l" data-p="rh-l" />
@@ -176,7 +155,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
         <path class="coat ruff" d="M3.4 -18.1 C7.6 -18.7 10.6 -15.5 10 -11.1 C9.8 -9.1 8.8 -7.9 7.4 -7.3 C7.8 -8.9 7 -9.5 6.4 -8.9 C6.6 -10.5 5.6 -10.9 5 -10.1 C4.6 -13.1 3.6 -15.5 3.4 -18.1 Z" />
         <path class="collar" d="M4.4 -16.6 Q7.8 -15 11 -17.4" />
         <circle class="tag" cx="7.8" cy="-14.4" r="1.1" />
-        <g transform="translate(-1.6 4.2)">${l}</g>
+        <g transform="translate(-1.6 4.2)">${c}</g>
       </g>
     </g>
     <g class="pose pose-sit">
@@ -190,7 +169,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
       <path class="coat ruff" d="M2.4 -21.6 C6.6 -22.2 9.6 -19 9 -14.6 C8.8 -12.6 7.8 -11.4 6.4 -10.8 C6.8 -12.4 6 -13 5.4 -12.4 C5.6 -14 4.6 -14.4 4 -13.6 C3.6 -16.6 2.6 -19 2.4 -21.6 Z" />
       <path class="collar" d="M3.2 -21.6 Q6.6 -20 9.8 -22.4" />
       <circle class="tag" cx="6.6" cy="-19.4" r="1.2" />
-      <g transform="translate(-3.2 -2.6)">${l}</g>
+      <g transform="translate(-3.2 -2.6)">${c}</g>
     </g>
     <g class="pose pose-lie">
       <path class="tail plume" d="M-12.4 -6.6 C-17 -10.4 -14.2 -16 -8 -14.2" />
@@ -199,24 +178,9 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
       <rect class="coat" x="8" y="-3.2" width="9.6" height="3.2" rx="1.6" />
       <path class="coat ruff" d="M4 -11.6 C8.2 -12 10.6 -8.6 9.8 -4.6 C8.6 -5.4 8 -5 7.6 -4.2 C7 -5.6 6 -5.6 5.4 -4.8 C5 -7 4.2 -9 4 -11.6 Z" />
       <path class="collar" d="M4.8 -11.4 Q7.6 -9.8 10 -11.8" />
-      <g transform="translate(-1 12.4)">${l}</g>
+      <g transform="translate(-1 12.4)">${c}</g>
     </g>
-  </g>`},d={viewBox:[-14,-23,28,24],markup:`
-  <g class="butterfly-body">
-    <g class="wing-l">
-      <path class="upper" d="M-0.5 -9 C-4 -21 -13 -22 -12.5 -14 C-12 -10 -6 -8 -0.5 -8 Z" />
-      <path class="lower" d="M-0.5 -7 C-6 -7 -10 -4 -8.5 -1 C-6.5 1 -2 -2 -0.5 -5.5 Z" />
-      <circle class="spot" cx="-8" cy="-15" r="1.7" />
-    </g>
-    <g class="wing-r">
-      <path class="upper" d="M0.5 -9 C4 -21 13 -22 12.5 -14 C12 -10 6 -8 0.5 -8 Z" />
-      <path class="lower" d="M0.5 -7 C6 -7 10 -4 8.5 -1 C6.5 1 2 -2 0.5 -5.5 Z" />
-      <circle class="spot" cx="8" cy="-15" r="1.7" />
-    </g>
-    <path class="antenna" d="M-0.4 -14.5 C-1.5 -18 -2.6 -19.6 -4.2 -20.2 M0.4 -14.5 C1.5 -18 2.6 -19.6 4.2 -20.2" />
-    <ellipse class="thorax" cx="0" cy="-7" rx="1.3" ry="5.6" />
-    <circle class="thorax" cx="0" cy="-13.4" r="1.6" />
-  </g>`},f={viewBox:[-10,-12,20,12.5],markup:`
+  </g>`},u={viewBox:[-10,-12,20,12.5],markup:`
   <g class="ladybug-body">
     <path class="legs" d="M-3.5 -1.2 l-1.2 1.2 M0 -1.2 v1.3 M3.4 -1.2 l1.2 1.2" />
     <g class="wings">
@@ -229,7 +193,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
     <circle class="dot" cx="3.4" cy="-3" r="1" />
     <path class="head" d="M5.6 -1.3 C5.4 -3.6 6.3 -5.2 7.6 -5 C9.4 -4.6 9.6 -1.3 7.8 -1.3 Z" />
     <circle class="eye" cx="7.9" cy="-3.6" r="0.55" />
-  </g>`},p={viewBox:[-8,-13,16,14],markup:`
+  </g>`},d={viewBox:[-8,-13,16,14],markup:`
   <g class="firefly-body">
     <circle class="halo" cx="-2.6" cy="-6" r="5.5" />
     <g class="wings">
@@ -239,7 +203,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
     <ellipse class="abdomen" cx="0" cy="-6" rx="2.8" ry="1.7" />
     <circle class="lamp" cx="-2.6" cy="-6" r="1.9" />
     <circle class="head" cx="3" cy="-6.4" r="1.2" />
-  </g>`},m={viewBox:[-9,-13,18,14],markup:`
+  </g>`},f={viewBox:[-9,-13,18,14],markup:`
   <g class="bee-body">
     <g class="wings">
       <ellipse cx="-1" cy="-10.6" rx="3.4" ry="2" transform="rotate(-25 -1 -10.6)" />
@@ -250,7 +214,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
     <path class="stripes" d="M-1.8 -9 V-3 M1 -9.3 V-2.7" />
     <circle class="head" cx="4.9" cy="-6.4" r="2" />
     <circle class="eye" cx="5.6" cy="-6.9" r="0.55" />
-  </g>`},h={viewBox:[-15,-25,30,26],markup:`
+  </g>`},p={viewBox:[-15,-25,30,26],markup:`
   <g class="squirrel-body">
     <g class="tail">
       <path d="M-3.5 -4.5 C-11 -3 -15.5 -10 -12.5 -17.5 C-10.5 -23 -3.5 -24.5 -1.8 -20 C-0.8 -17 -4 -15.4 -6.4 -16.6 C-8.6 -13.6 -8 -9.4 -2.5 -8.2 Z" />
@@ -275,32 +239,7 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
       <ellipse class="paw" cx="7.4" cy="-6.6" rx="1.3" ry="0.9" />
     </g>
     <ellipse class="foot" cx="1.6" cy="-0.7" rx="3.2" ry="0.9" />
-  </g>`},g={viewBox:[-15,-27,30,28],markup:`
-  <g class="owl-body">
-    <path class="wing wing-up l" d="M-5 -15 C-13.5 -21 -15 -11 -11.5 -6 C-9.6 -9 -7.4 -11 -5 -11 Z" />
-    <path class="wing wing-up r" d="M5 -15 C13.5 -21 15 -11 11.5 -6 C9.6 -9 7.4 -11 5 -11 Z" />
-    <ellipse class="plumage" cx="0" cy="-9.6" rx="6.8" ry="8.8" />
-    <ellipse class="belly" cx="0" cy="-7.4" rx="4.4" ry="5.4" />
-    <path class="chevrons" d="M-2.6 -9.4 l1.2 1 l1.2 -1 M0.2 -9.4 l1.2 1 l1.2 -1 M-1.2 -6.4 l1.2 1 l1.2 -1" />
-    <path class="wing wing-fold l" d="M-6.4 -13 C-8.6 -9 -8 -4.4 -5 -2.4 C-4.6 -6 -5 -10 -6.4 -13 Z" />
-    <path class="wing wing-fold r" d="M6.4 -13 C8.6 -9 8 -4.4 5 -2.4 C4.6 -6 5 -10 6.4 -13 Z" />
-    <g class="head">
-      <path class="plumage" d="M-6 -21 L-6.8 -26 L-2.8 -22.8 Z M6 -21 L6.8 -26 L2.8 -22.8 Z" />
-      <ellipse class="plumage" cx="0" cy="-19.4" rx="6.6" ry="5.4" />
-      <g class="face">
-        <circle class="disc" cx="-2.8" cy="-19.4" r="2.9" />
-        <circle class="disc" cx="2.8" cy="-19.4" r="2.9" />
-        <g class="eyes">
-          <circle class="iris" cx="-2.8" cy="-19.4" r="1.75" />
-          <circle class="iris" cx="2.8" cy="-19.4" r="1.75" />
-          <circle class="pupil" cx="-2.6" cy="-19.4" r="0.95" />
-          <circle class="pupil" cx="3" cy="-19.4" r="0.95" />
-        </g>
-        <path class="beak" d="M-0.9 -17.6 L0.9 -17.6 L0 -15.4 Z" />
-      </g>
-    </g>
-    <path class="talons" d="M-2.8 -1.4 v1.2 M-1.6 -1.4 v1.2 M1.6 -1.4 v1.2 M2.8 -1.4 v1.2" />
-  </g>`},_={viewBox:[-14,-13,34,14],markup:`
+  </g>`},m={viewBox:[-14,-13,34,14],markup:`
   <g class="cham-body">
     <path class="tail" d="M-6 -5 C-10 -5 -12.6 -3.6 -12.6 -1.6 C-12.6 0.6 -10.4 1 -9.6 -0.6 C-9 -1.8 -10.4 -2.6 -11 -1.6" />
     <g class="legs">
@@ -318,4 +257,4 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
     <path class="casque" d="M5.4 -9 C7 -12.2 9.6 -11.8 10.2 -9.8 Z" />
     <circle class="turret" cx="8.6" cy="-7.4" r="2" />
     <circle class="pupil" cx="9" cy="-7.4" r="0.7" />
-  </g>`};export{o as a,g as c,h as d,t as f,n as h,_ as i,u as l,r as m,a as n,p as o,i as p,d as r,f as s,m as t,c as u};
+  </g>`};export{u as a,p as c,r as d,n as f,d as i,t as l,m as n,l as o,a as r,s,f as t,i as u};
