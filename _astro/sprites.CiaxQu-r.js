@@ -193,43 +193,4 @@ var e={inOut:e=>e<.5?2*e*e:1-(-2*e+2)**2/2,out:e=>1-(1-e)**3,linear:e=>e},t=clas
     <circle class="dot" cx="3.4" cy="-3" r="1" />
     <path class="head" d="M5.6 -1.3 C5.4 -3.6 6.3 -5.2 7.6 -5 C9.4 -4.6 9.6 -1.3 7.8 -1.3 Z" />
     <circle class="eye" cx="7.9" cy="-3.6" r="0.55" />
-  </g>`},d={viewBox:[-8,-13,16,14],markup:`
-  <g class="firefly-body">
-    <circle class="halo" cx="-2.6" cy="-6" r="5.5" />
-    <g class="wings">
-      <ellipse cx="-0.8" cy="-9.4" rx="3.2" ry="1.4" transform="rotate(-20 -0.8 -9.4)" />
-      <ellipse cx="0.6" cy="-9.6" rx="3" ry="1.3" transform="rotate(15 0.6 -9.6)" />
-    </g>
-    <ellipse class="abdomen" cx="0" cy="-6" rx="2.8" ry="1.7" />
-    <circle class="lamp" cx="-2.6" cy="-6" r="1.9" />
-    <circle class="head" cx="3" cy="-6.4" r="1.2" />
-  </g>`},f={viewBox:[-9,-13,18,14],markup:`
-  <g class="bee-body">
-    <g class="wings">
-      <ellipse cx="-1" cy="-10.6" rx="3.4" ry="2" transform="rotate(-25 -1 -10.6)" />
-      <ellipse cx="1.4" cy="-10.8" rx="3" ry="1.8" transform="rotate(20 1.4 -10.8)" />
-    </g>
-    <path class="sting" d="M-4.6 -6.6 L-7.4 -6 L-4.6 -5.2 Z" />
-    <ellipse class="fuzz" cx="0" cy="-6" rx="4.8" ry="3.4" />
-    <path class="stripes" d="M-1.8 -9 V-3 M1 -9.3 V-2.7" />
-    <circle class="head" cx="4.9" cy="-6.4" r="2" />
-    <circle class="eye" cx="5.6" cy="-6.9" r="0.55" />
-  </g>`},p={viewBox:[-14,-13,34,14],markup:`
-  <g class="cham-body">
-    <path class="tail" d="M-6 -5 C-10 -5 -12.6 -3.6 -12.6 -1.6 C-12.6 0.6 -10.4 1 -9.6 -0.6 C-9 -1.8 -10.4 -2.6 -11 -1.6" />
-    <g class="legs">
-      <path class="leg back" d="M-4 -4.2 L-5.2 -0.6" />
-      <path class="leg front" d="M3.6 -4.2 L4.8 -0.6" />
-    </g>
-    <path class="skin" d="M-7 -5 C-6 -10 2 -11 6 -8.2 C7.6 -7 7.6 -4.6 6 -4 C2 -2.6 -4 -2.6 -7 -5 Z" />
-    <path class="crest" d="M-5 -8.4 C-2 -10.6 2 -10.8 5 -9" />
-    <path class="stripe" d="M-4.2 -5.4 C-1 -4.6 2 -4.6 4.6 -5.4" />
-    <g class="tongue">
-      <path d="M11.4 -6.2 L19 -6.2" />
-      <circle cx="19" cy="-6.2" r="0.9" />
-    </g>
-    <path class="skin" d="M5 -9 C8 -11 11.6 -9 12 -6.4 C11.2 -5 8.6 -4.2 6 -4.4 Z" />
-    <path class="casque" d="M5.4 -9 C7 -12.2 9.6 -11.8 10.2 -9.8 Z" />
-    <circle class="turret" cx="8.6" cy="-7.4" r="2" />
-    <circle class="pupil" cx="9" cy="-7.4" r="0.7" />
-  </g>`};export{u as a,t as c,n as d,d as i,i as l,p as n,l as o,a as r,s,f as t,r as u};
+  </g>`};export{t as a,n as c,s as i,u as n,i as o,l as r,r as s,a as t};
